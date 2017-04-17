@@ -1,9 +1,11 @@
 # api documentation for  [gulp-handlebars (v4.0.0)](https://github.com/lazd/gulp-handlebars)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-handlebars.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-handlebars) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-handlebars.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-handlebars)
 #### Handlebars plugin for gulp
 
-[![NPM](https://nodei.co/npm/gulp-handlebars.png?downloads=true)](https://www.npmjs.com/package/gulp-handlebars)
+[![NPM](https://nodei.co/npm/gulp-handlebars.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-handlebars)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-handlebars/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp-handlebars_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-handlebars/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-gulp-handlebars/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-handlebars/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-handlebars/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-handlebars/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-handlebars/build/screenCapture.npmPackageListing.svg)
 
@@ -17,16 +19,14 @@
 
 {
     "author": {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com"
+        "name": "Larry Davis"
     },
     "bugs": {
         "url": "https://github.com/lazd/gulp-handlebars/issues"
     },
     "contributors": [
         {
-            "name": "Whitney Young",
-            "email": "wbyoung@fadingred.com"
+            "name": "Whitney Young"
         }
     ],
     "dependencies": {
@@ -63,13 +63,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "lazd",
-            "email": "lazdnet@gmail.com"
+            "name": "lazd"
         }
     ],
     "name": "gulp-handlebars",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/lazd/gulp-handlebars.git"
@@ -80,16 +78,6 @@
     "version": "4.0.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-handlebars](#apidoc.module.gulp-handlebars)
-
-
-
-# <a name="apidoc.module.gulp-handlebars"></a>[module gulp-handlebars](#apidoc.module.gulp-handlebars)
 
 
 
