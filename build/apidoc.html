@@ -61,12 +61,172 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-handlebars">module gulp-handlebars</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-handlebars.gulp-handlebars">
+            function <span class="apidocSignatureSpan"></span>gulp-handlebars
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-handlebars.toString">
+            function <span class="apidocSignatureSpan">gulp-handlebars.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-handlebars.toString">module gulp-handlebars.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-handlebars.toString.toString">
+            function <span class="apidocSignatureSpan">gulp-handlebars.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gulp-handlebars" id="apidoc.module.gulp-handlebars">module gulp-handlebars</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-handlebars.gulp-handlebars" id="apidoc.element.gulp-handlebars.gulp-handlebars">
+        function <span class="apidocSignatureSpan"></span>gulp-handlebars
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gulp-handlebars = function (opts) {
+  &#x27;use strict&#x27;;
+
+  opts = opts || {};
+  var compilerOptions = opts.compilerOptions || {};
+  var handlebars = opts.handlebars || require(&#x27;handlebars&#x27;);
+
+  return through2.obj(function(file, enc, callback) {
+    if (file.isNull()) {
+      return callback(null, file);
+    }
+
+    if (file.isStream()) {
+      this.emit(&#x27;error&#x27;, new gutil.PluginError(PLUGIN_NAME, &#x27;Streaming not supported&#x27;));
+      return callback();
+    }
+
+    var contents = file.contents.toString();
+    var compiled = null;
+    try {
+      var ast = handlebars.parse(contents);
+      // Preprocess AST before compiling
+      if (opts.processAST) {
+        // processAST may return new AST or change it in place
+        ast = opts.processAST(ast) || ast;
+      }
+      compiled = handlebars.precompile(ast, compilerOptions).toString();
+    }
+    catch (err) {
+      this.emit(&#x27;error&#x27;, new gutil.PluginError(PLUGIN_NAME, err, {
+        fileName: file.path
+      }));
+      return callback();
+    }
+
+    file.contents = new Buffer(compiled);
+    file.path = gutil.replaceExtension(file.path, &#x27;.js&#x27;);
+
+    // Options that take effect when used with gulp-define-module
+    file.defineModuleOptions = {
+      require: {
+        Handlebars: &#x27;handlebars&#x27;
+      },
+      context: {
+        handlebars: &#x27;Handlebars.template(&#x3c;%= contents %&#x3e;)&#x27;
+      },
+      wrapper: &#x27;&#x3c;%= handlebars %&#x3e;&#x27;
+    };
+
+    callback(null, file);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-handlebars.toString" id="apidoc.element.gulp-handlebars.toString">
+        function <span class="apidocSignatureSpan">gulp-handlebars.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+if (file.isStream()) {
+  this.emit(&#x27;error&#x27;, new gutil.PluginError(PLUGIN_NAME, &#x27;Streaming not supported&#x27;));
+  return callback();
+}
+
+var contents = file.contents.<span class="apidocCodeKeywordSpan">toString</span>();
+var compiled = null;
+try {
+  var ast = handlebars.parse(contents);
+  // Preprocess AST before compiling
+  if (opts.processAST) {
+    // processAST may return new AST or change it in place
+    ast = opts.processAST(ast) || ast;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-handlebars.toString" id="apidoc.module.gulp-handlebars.toString">module gulp-handlebars.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-handlebars.toString.toString" id="apidoc.element.gulp-handlebars.toString.toString">
+        function <span class="apidocSignatureSpan">gulp-handlebars.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+if (file.isStream()) {
+  this.emit(&#x27;error&#x27;, new gutil.PluginError(PLUGIN_NAME, &#x27;Streaming not supported&#x27;));
+  return callback();
+}
+
+var contents = file.contents.<span class="apidocCodeKeywordSpan">toString</span>();
+var compiled = null;
+try {
+  var ast = handlebars.parse(contents);
+  // Preprocess AST before compiling
+  if (opts.processAST) {
+    // processAST may return new AST or change it in place
+    ast = opts.processAST(ast) || ast;
+...</pre></li>
+    </ul>
+
 
 </div>
 
