@@ -70,28 +70,6 @@
 
         </li>
 
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.gulp-handlebars.toString">
-            function <span class="apidocSignatureSpan">gulp-handlebars.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-handlebars.toString">module gulp-handlebars.toString</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.gulp-handlebars.toString.toString">
-            function <span class="apidocSignatureSpan">gulp-handlebars.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
     </ol></li>
 
 </ol></div>
@@ -160,71 +138,6 @@
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.gulp-handlebars.toString" id="apidoc.element.gulp-handlebars.toString">
-        function <span class="apidocSignatureSpan">gulp-handlebars.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-}
-
-if (file.isStream()) {
-  this.emit(&#x27;error&#x27;, new gutil.PluginError(PLUGIN_NAME, &#x27;Streaming not supported&#x27;));
-  return callback();
-}
-
-var contents = file.contents.<span class="apidocCodeKeywordSpan">toString</span>();
-var compiled = null;
-try {
-  var ast = handlebars.parse(contents);
-  // Preprocess AST before compiling
-  if (opts.processAST) {
-    // processAST may return new AST or change it in place
-    ast = opts.processAST(ast) || ast;
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.gulp-handlebars.toString" id="apidoc.module.gulp-handlebars.toString">module gulp-handlebars.toString</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.gulp-handlebars.toString.toString" id="apidoc.element.gulp-handlebars.toString.toString">
-        function <span class="apidocSignatureSpan">gulp-handlebars.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-}
-
-if (file.isStream()) {
-  this.emit(&#x27;error&#x27;, new gutil.PluginError(PLUGIN_NAME, &#x27;Streaming not supported&#x27;));
-  return callback();
-}
-
-var contents = file.contents.<span class="apidocCodeKeywordSpan">toString</span>();
-var compiled = null;
-try {
-  var ast = handlebars.parse(contents);
-  // Preprocess AST before compiling
-  if (opts.processAST) {
-    // processAST may return new AST or change it in place
-    ast = opts.processAST(ast) || ast;
-...</pre></li>
     </ul>
 
 
