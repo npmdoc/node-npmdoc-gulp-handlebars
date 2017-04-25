@@ -1,7 +1,7 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
     "buildNpmdoc": "gulp-handlebars",
-    "description": "api documentation for [gulp-handlebars (v4.0.0)](https://github.com/lazd/gulp-handlebars) [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-handlebars.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-handlebars) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-handlebars.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-handlebars)",
+    "description": "#### basic api documentation for  [gulp-handlebars (v4.0.0)](https://github.com/lazd/gulp-handlebars)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-handlebars.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-handlebars) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-handlebars.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-handlebars)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "gulp-handlebars": "*",
